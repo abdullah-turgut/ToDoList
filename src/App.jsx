@@ -19,12 +19,15 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-full bg-slate-300 flex justify-center pt-12">
-      <main className="flex flex-col gap-8">
-        <h1>Todo App</h1>
+    <div className=" w-full flex justify-center pt-12 ">
+      <main className="flex flex-col gap-8 shadow-[0_0_500px_gray]  px-4 py-8 rounded-2xl">
+        <h1 className="text-center text-4xl text-rose-800">Todo App</h1>
         <Todos data={data} setData={setData} />
         <Form localData={data} setData={setData} />
-        <button onClick={toogleHide}>
+        <button
+          onClick={toogleHide}
+          className="bg-gray-400 w-fit mx-auto py-1 px-4 rounded-lg cursor-pointer"
+        >
           {hide ? 'Show All' : 'Hide Completed'}
         </button>
       </main>
